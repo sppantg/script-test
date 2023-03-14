@@ -9,7 +9,7 @@ function getAppDir(){
   console.log('AppDir');
     var scripts = document.getElementsByTagName('script');
     var currentScript = Array.prototype.filter.call(scripts, function(script) {
-        return script.src.indexOf('ibl-ai-mentor-web') !== -1;
+        return script.src.indexOf('test') !== -1;
     })[0];
     return currentScript.src.substring(0, currentScript.src.lastIndexOf('/')+1);
 }
