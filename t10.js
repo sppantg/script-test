@@ -41,14 +41,14 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
         $('.chat-response .grow-flex').append(aDiv);
 
 
-        followTypeWriter(clickCount);
+        followTypeWriter(qaArray,clickCount);
         clickCount++;
 
 
       });
 });
 
-function followTypeWriter(index) {
+function followTypeWriter(qaArray,index) {
     var i = 0;
     var txt = qaArray[index].answer;
     var speed = 20;
