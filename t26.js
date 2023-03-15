@@ -76,6 +76,21 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
         aDiv.innerHTML = `<div class="rep-div bot-rep"><div class="div-block-279 bot-gb"><img src="https://assets.website-files.com/63fdf140d3e5fb227d1c78ba/640f142dfef4eb2eca0a0d91_abstract.png" loading="lazy" alt="" class="image-25 bot-img"></div><div class="div-block-281"><div class="text-block-187 index_`+clickCount+`"></div><div class="sources_f index_`+clickCount+`"><div class="text-block-104">Learn more:</div><div><a href="#" class="link-block-21 w-inline-block"><div class="text-block-172">1. en.wikipedia.org</div></a></div><div><a href="#" class="link-block-21 w-inline-block"><div class="text-block-172">2. investopedia.com</div></a></div><div><a href="#" class="link-block-21 w-inline-block"><div class="text-block-172">3. ibm.com</div></a></div></div><div class="related_f index_`+clickCount+`"><div class="text-block-171">Related:</div><div class="rel-row"><div class="text-block-192">Ways to make a difference</div><div class="div-block-294-open"><img src="https://assets.website-files.com/63fdf140d3e5fb227d1c78ba/640b1c608bfe23641e3af04a_delete.png" loading="lazy" alt="" class="hidden-img"><img src="https://assets.website-files.com/63fdf140d3e5fb227d1c78ba/640b1c608bfe23fd843af04c_delete1x.png" loading="lazy" alt="" class="hidden-img-rot"></div><div class="div-block-294"><img src="https://assets.website-files.com/63efb3c265a5145314a5ae68/63f8f51f6471e138ecf5f406_63efb3c265a5144988a5aea8_63ea59c8a06f760a6f1b3d18_plus.png" loading="lazy" alt="" class="image-116"><img src="https://assets.website-files.com/63efb3c265a5145314a5ae68/63f8f51f6471e138ecf5f406_63efb3c265a5144988a5aea8_63ea59c8a06f760a6f1b3d18_plus.png" loading="lazy" alt="" class="image-93-rot"></div></div><div class="rel-answer"><div class="answer-text">One &nbsp;way to make a difference is by practicing kindness in your daily interactions with others. This could be as simple as holding the door open for someone, offering a smile or compliment, or lending a listening ear to a friend or stranger. Small acts of kindness can have a ripple effect and contribute to a more positive and compassionate world.</div></div><div class="rel-row sec"><div class="text-block-192">How to help the environment</div><div class="div-block-294-open"><img src="https://assets.website-files.com/63fdf140d3e5fb227d1c78ba/640b1c608bfe23641e3af04a_delete.png" loading="lazy" alt="" class="hidden-img"><img src="https://assets.website-files.com/63fdf140d3e5fb227d1c78ba/640b1c608bfe23fd843af04c_delete1x.png" loading="lazy" alt="" class="hidden-img-rot"></div><div class="div-block-294"><img src="https://assets.website-files.com/63efb3c265a5145314a5ae68/63f8f51f6471e138ecf5f406_63efb3c265a5144988a5aea8_63ea59c8a06f760a6f1b3d18_plus.png" loading="lazy" alt="" class="image-116"><img src="https://assets.website-files.com/63efb3c265a5145314a5ae68/63f8f51f6471e138ecf5f406_63efb3c265a5144988a5aea8_63ea59c8a06f760a6f1b3d18_plus.png" loading="lazy" alt="" class="image-93-rot"></div></div><div class="rel-answer"><div class="answer-text">To help the environment, there are many things we can do in our daily lives. One of the most important is to reduce our waste by using reusable bags, containers, and water bottles, and recycling whenever possible.</div></div><div class="rel-row sec"><div class="text-block-192">Volunteer opportunities </div><div class="div-block-294-open"><img src="https://assets.website-files.com/63fdf140d3e5fb227d1c78ba/640b1c608bfe23641e3af04a_delete.png" loading="lazy" alt="" class="hidden-img"><img src="https://assets.website-files.com/63fdf140d3e5fb227d1c78ba/640b1c608bfe23fd843af04c_delete1x.png" loading="lazy" alt="" class="hidden-img-rot"></div><div class="div-block-294"><img src="https://assets.website-files.com/63efb3c265a5145314a5ae68/63f8f51f6471e138ecf5f406_63efb3c265a5144988a5aea8_63ea59c8a06f760a6f1b3d18_plus.png" loading="lazy" alt="" class="image-116"><img src="https://assets.website-files.com/63efb3c265a5145314a5ae68/63f8f51f6471e138ecf5f406_63efb3c265a5144988a5aea8_63ea59c8a06f760a6f1b3d18_plus.png" loading="lazy" alt="" class="image-93-rot"></div></div><div class="rel-answer"><div class="answer-text">One of the most popular volunteer opportunities is in environmental organizations, where volunteers can help with tasks such as cleaning up litter, planting trees, and conducting environmental research.</div></div></div></div></div>`;
         $('.chat-response .grow-flex').append(aDiv);
 
+
+        $( ".div-block-294" ).click(function() {
+            console.log('clicked');
+             $(this).parent().addClass('open');
+              $(this).parent().next('.rel-answer').addClass('open');
+        
+        
+          });
+            
+              $( ".div-block-294-open" ).click(function() {
+             $(this).parent().removeClass('open');
+                     $(this).parent().next('.rel-answer').removeClass('open');
+        
+          });
+
         setTimeout(function(){
             followTypeWriter(qaArray,clickCount);
             clickCount++;
@@ -147,16 +162,3 @@ titleType();
 }, 1000);
 }
 
-$( ".div-block-294" ).click(function() {
-    console.log('clicked');
-     $(this).parent().addClass('open');
-      $(this).parent().next('.rel-answer').addClass('open');
-
-
-  });
-    
-      $( ".div-block-294-open" ).click(function() {
-     $(this).parent().removeClass('open');
-             $(this).parent().next('.rel-answer').removeClass('open');
-
-  });
