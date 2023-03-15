@@ -36,7 +36,7 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
         $('.chat-response .grow-flex').append(qDiv);
 
         let aDiv = document.createElement('div');
-        aDiv.classList.add('div-block-278 bot-rep');
+        aDiv.className = 'div-block-278 bot-rep';
         aDiv.innerHTML = `<div class="rep-div bot-rep"><div class="div-block-279 bot-gb"><img src="https://assets.website-files.com/63fdf140d3e5fb227d1c78ba/640f142dfef4eb2eca0a0d91_abstract.png" loading="lazy" alt="" class="image-25 bot-img"></div><div class="div-block-281"><div class="text-block-187 index_`+clickCount+`"></div></div></div>`;
         $('.chat-response .grow-flex').append(aDiv);
       });
