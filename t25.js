@@ -146,3 +146,17 @@ function titleType() {
 titleType();
 }, 1000);
 }
+
+$( ".div-block-294" ).click(function() {
+    console.log('clicked');
+     $(this).parent().addClass('open');
+      $(this).parent().next('.rel-answer').addClass('open');
+
+
+  });
+    
+      $( ".div-block-294-open" ).click(function() {
+     $(this).parent().removeClass('open');
+             $(this).parent().next('.rel-answer').removeClass('open');
+
+  });
