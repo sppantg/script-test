@@ -42,6 +42,20 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
     answer: 'A support vector machine is a type of supervised learning algorithm that classifies data by finding the best hyperplane that separates the classes with the largest margin.'
   }
 ];
+
+    //if focus is on input and enter is pressed
+    $('.ask-input2').keypress(function (e) {
+        if (e.which == 13) {
+            if ($('.ask-input2').val() == '') {
+                return ;
+            }
+            else {
+                $(".ask-submit-follow-up").trigger("click");
+            }
+    }});
+
+
+
     let clickCount = 0;
     $( ".ask-submit-follow-up" ).click(function() {
         $('.ask-input2').val('');
