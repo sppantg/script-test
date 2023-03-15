@@ -26,7 +26,6 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
     $( ".ask-submit-follow-up" ).click(function() {
         console.log(clickCount);   
         console.log(qaArray[clickCount])         
-        clickCount++;
 
 
         //create new div
@@ -43,6 +42,8 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
 
 
         followTypeWriter(clickCount);
+        clickCount++;
+
 
       });
 });
