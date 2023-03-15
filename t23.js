@@ -20,14 +20,30 @@ answer: 'Pandas is a popular Python library that provides data manipulation and 
 {
 question: 'What is overfitting in machine learning?',
 answer: 'Overfitting occurs when a machine learning model is trained too well on a particular set of data, to the point that it becomes too specialized to that data and performs poorly on new, unseen data.'
-}
+},
+{
+    question: 'What is a neural network?',
+    answer: 'A neural network is a type of machine learning algorithm modeled after the structure and function of the human brain, consisting of interconnected nodes that process information and make predictions.'
+  },
+  {
+    question: 'What is deep learning?',
+    answer: 'Deep learning is a type of machine learning that uses artificial neural networks with multiple layers to learn and make predictions from complex data, such as images or audio.'
+  },
+  {
+    question: 'What is a decision tree in machine learning?',
+    answer: 'A decision tree is a type of supervised learning algorithm that uses a tree-like model of decisions and their possible consequences to make predictions or decisions.'
+  },
+  {
+    question: 'What is gradient descent in machine learning?',
+    answer: 'Gradient descent is an optimization algorithm used in machine learning to minimize the error of a model by adjusting its parameters iteratively in the direction of steepest descent.'
+  },
+  {
+    question: 'What is a support vector machine?',
+    answer: 'A support vector machine is a type of supervised learning algorithm that classifies data by finding the best hyperplane that separates the classes with the largest margin.'
+  }
 ];
     let clickCount = 0;
     $( ".ask-submit-follow-up" ).click(function() {
-        if(clickCount == qaArray.length){
-            clickCount = 0;
-        }
-
         $('.ask-input2').val('');
         $('.reg-btn').hide();
         console.log(clickCount);   
@@ -61,10 +77,8 @@ function followTypeWriter(qaArray,index) {
     var speed = 20;
 
     function ftypeWriter() {
-        if (i < txt.length) {
-             $('.index_'+index).last()[0].innerHTML += txt.charAt(i);
-        
-            // $('.index_'+index)[0].innerHTML += txt.charAt(i);
+        if (i < txt.length) {        
+            $('.index_'+index)[0].innerHTML += txt.charAt(i);
             i++;
             speed = Math.floor(Math.random() * 15) + 1;
             setTimeout(ftypeWriter, speed);
