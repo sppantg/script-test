@@ -62,7 +62,7 @@ function followTypeWriter(qaArray,index) {
 
     function ftypeWriter() {
         if (i < txt.length) {
-            $('.index_'+index).html($('.index_'+index).html() + txt.charAt(i));
+            $('.index_'+index + ':last').html($('.index_'+index + ':last').html() + txt.charAt(i));
             i++;
             speed = Math.floor(Math.random() * 15) + 1;
             setTimeout(ftypeWriter, speed);
