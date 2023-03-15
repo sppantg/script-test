@@ -60,8 +60,6 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
     $( ".ask-submit-follow-up" ).click(function() {
         $('.ask-input2').val('');
         $('.reg-btn').hide();
-        console.log(clickCount);   
-        console.log(qaArray[clickCount])         
 
 
         //create new div
@@ -78,10 +76,8 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
 
 
         $( ".div-block-294" ).click(function() {
-            console.log('clicked');
              $(this).parent().addClass('open');
               $(this).parent().next('.rel-answer').addClass('open');
-        
         
           });
             
@@ -117,23 +113,13 @@ function followTypeWriter(qaArray,index) {
             $('.sources_f.index_'+index).show();
             $('.related_f.index_'+index).show();
             $('.reg-btn').show();
-
-            //if question length is greater than 30 then trim it
             if(qaArray[index].question.length > 27){
                 var question = qaArray[index].question.substring(0,27) + '...';
             }
             else{
                 var question = qaArray[index].question;
             }
-
             titleWriter(question);
-
-
-
-
-
-
-
         }
     }
     ftypeWriter();
