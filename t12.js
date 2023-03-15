@@ -42,9 +42,10 @@ answer: 'Overfitting occurs when a machine learning model is trained too well on
 
         setTimeout(function(){
             followTypeWriter(qaArray,clickCount);
+            clickCount++;
+
         }
         , 1000);
-        clickCount++;
       });
 });
 
