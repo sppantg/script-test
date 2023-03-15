@@ -67,7 +67,16 @@ function followTypeWriter(qaArray,index) {
             $('.sources_f.index_'+index).show();
             $('.related_f.index_'+index).show();
             $('.reg-btn').show();
-            titleWriter(qaArray[index].question);
+
+            //if question length is greater than 30 then trim it
+            if(qaArray[index].question.length > 20){
+                var question = qaArray[index].question.substring(0,20) + '...';
+            }
+            else{
+                var question = qaArray[index].question;
+            }
+
+            titleWriter(question);
 
 
 
