@@ -67,7 +67,38 @@ function followTypeWriter(qaArray,index) {
             $('.sources_f.index_'+index).show();
             $('.related_f.index_'+index).show();
             $('.reg-btn').show();
+            titleWriter(qaArray[index].question);
+
+
+
+
+
+
+
         }
     }
     ftypeWriter();
+}
+
+function titleWriter(txt3) {
+    $('.new-chat-text').html('');
+   $('.new-chat-text').addClass('with_blink');
+var y = 0;
+
+setTimeout(function() {
+function titleType() {
+  if (y < txt3.length) {
+    $('.new-chat-text')[0].innerHTML += txt3.charAt(y);
+  //   $('.new-chat-text')[1].innerHTML += txt3.charAt(y);
+    y++;
+    speed = Math.floor(Math.random() * 100) + 4;
+    setTimeout(titleType, speed);
+  } 
+  else {
+    $('.new-chat-text').removeClass('with_blink');
+  }
+}
+
+titleType();
+}, 1000);
 }
