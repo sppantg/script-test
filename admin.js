@@ -1,3 +1,4 @@
+$ = jQuery;
 $(document).ready(function () {
   // Get the HTML form element
   const formElement = $("#email-form-4");
